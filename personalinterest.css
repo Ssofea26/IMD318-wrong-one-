@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #F5F5F5; 
+}
+
+header {
+    background-color: #191919;
+    color: #F5F5F5;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F8DE22;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.title {
+    flex-grow: 1;
+    text-align: right;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #191919;
+    text-align: center;
+    border-bottom: 1px solid #F8DE22;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-item {
+    color: #F8DE22;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.menu-item::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #F8DE22;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    color: #FFF;
+}
+
+.menu-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #191919;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.box {
+    width: calc(100% - 40px);
+    max-width: 800px; 
+    min-height: 200px; 
+    background-color: #282828;
+    padding: 20px;
+    border: 1px solid #F8DE22;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    gap: 20px;
+    color: #F5F5F5;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.text-content {
+    flex: 1;
+}
+
+h2, p {
+    transition: color 0.3s ease;
+}
+
+.box:hover h2, .box:hover p {
+    color: #FFF;
+}
+
+section {
+    width: calc(100% - 40px);
+    max-width: 800px;
+}
+
+footer {
+    background-color: #191919;
+    color: #F5F5F5;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid #F8DE22;
+}
